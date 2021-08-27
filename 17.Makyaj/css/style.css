@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaisei+Decol&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Kaisei Decol', serif;
+}
+
+
+.top-flex{
+    display: flex;
+    width: 100vw;
+    background-color: yellowgreen;
+    justify-content: space-evenly;
+    margin:0 auto;
+    padding: 0.5rem;
+}
+.top-flex .top-number{ /*mobilde kaldır*/
+    position: relative;
+    right: 300px;
+}
+.top-flex .top-cargo{
+    position: relative;
+    left: 300px;
+}
+
+/*top-little-head*/
+
+.flex-nav{
+    display: flex;
+    width: 100vw;
+    justify-content: space-evenly;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+#note{
+    position: relative;
+    right: 150px;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;   
+
+}
+.search input{
+    width: 358px;
+    padding: 0.5rem 0.5rem;
+}
+.search span{
+    width: 100px;
+    background-color: #4B5563;
+    padding: 0.5rem 2rem;
+    color:#fff;
+    font-weight:500; 
+}
+
+
+.informations{
+    position: relative;
+    left: 120px;
+}
+
+
+.Ux{
+    display: flex;
+    
+}
+
+.Ux li{
+   padding: 0.2rem 0.5rem;
+}
+
+.fa-user, .fa-shopping-bag{
+    padding: 1rem;
+    font-size: 20px;
+    border:solid 1px black;
+    border-radius: 50%;
+}
+/*header*/
+
+
+.dropdown{
+    margin-top: 1rem;
+    width: 100vw;
+    background-color: yellow;
+}
+.drops{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    align-items: center;
+}
+.drops li{
+    padding: 0.2rem 1.5rem;
+
+}
+.drops li:hover{
+    color:red;
+}
+/*malzemeler*/
+
+.face-components{
+    /* margin:0 6rem; */
+    margin-left: 10rem;
+    width: 1300px;
+    height: 100px;
+    
+}
+
+.face-flex{
+    display: flex;
+}
+.face-flex li{
+    /* padding: 0.2rem 1rem; */
+    /* margin: 0.1rem 6rem; */
+    width: max-content;
+    padding-top: 0.4rem;
+    
+
+}
+.face-one{
+    position:absolute;
+    /* right:10px; */
+    left: 30px;
+    /* margin: 0.1rem 6rem; */
+    
+}
+.face-two, .face-three, .face-four{
+    padding: 0.2rem 1rem; 
+     margin: 0.1rem 6rem;
+}
+.menu{
+    margin-top: 1.2rem;
+}
+/*slider*/
+
+.slider-img{
+    margin-top: 2rem;
+    width: 100vw;
+    height: 62vh;
+    cursor: pointer;
+   
+}
+
+.ballons{
+    /* z-index: 1; */
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    position: relative;
+    bottom: 25px;
+    left: 720px;
+    z-index: 2;
+   
+    
+}
+.ballon{
+    
+    border: solid 1px gainsboro;
+    border-radius: 50%;
+    padding: 0.4rem;
+}
+.ballon{
+    background-color: #fff;;
+}
+
+
+
+.most-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+}
