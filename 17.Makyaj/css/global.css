@@ -6,5 +6,10 @@ li{
 }
 
 hr{
-    color:yellow;
+     background-color: #E5E7EB; 
+     height: 1px; 
+     border: 0; 
+}
+.face-flex li:hover{
+    font-weight: bolder;
 }

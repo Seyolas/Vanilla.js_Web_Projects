@@ -4,6 +4,7 @@ const slider = document.querySelector(".slider");
 const yüz = document.querySelector(".yüz");
 const göz = document.querySelector(".göz");
 const dudak = document.querySelector(".dudak");
+const oje = document.querySelector(".oje");
 const kaş = document.querySelector(".kaş");
 const image= document.querySelector(".slider-img");
 
@@ -56,6 +57,7 @@ function allEvents(){
     // dudak.addEventListener("mouseout",xDudakClose);
     kaş.addEventListener("mouseenter",xKaş);
     // kaş.addEventListener("mouseout",xKaşClose);
+    oje.addEventListener("mouseenter",xOje);
     slider.addEventListener("click",moveImage);
    
 
@@ -225,19 +227,7 @@ function startSlider(){
 
 }
    
-       
-
     
-    
-
-
-
-
-
-
-
-
-
 
 
 function xYüz(){
@@ -273,15 +263,16 @@ function xYüz(){
     // body.insertBefore(div,slider);
     body.addEventListener("mousemove",function(e){
        if (e.target.className=="slider-img") {
-        
-        try {
         const faceComponents = document.querySelector(".face-components");
+        // faceComponents.style.display="none";
+       try {
         faceComponents.remove();
-        } catch (error) {
-            console.log("sikinti yok");
-        }
+       } catch (error) {
+           console.log("");
+       }
         
        }
+
     });
 }
 
@@ -321,13 +312,31 @@ function xGöz(){
 
 div.style.position="fixed";
 div.style.backgroundColor="#fff";
-    body.insertBefore(div,slider);
+navbar.appendChild(div);
+// body.insertBefore(div,slider);
+body.addEventListener("mousemove",function(e){
+   if (e.target.className=="slider-img") {
+    const faceComponents = document.querySelector(".face-components");
+    // faceComponents.style.display="none";
+   try {
+    faceComponents.remove();
+   } catch (error) {
+       console.log("");
+   }
+    
+   }
+
+});
+
+
 }
 
-function xGözClose(){
-    const sx = document.querySelector(".face-components");
-    sx.remove();
-}
+
+// function xGözClose(){
+//     const sx = document.querySelector(".face-components");
+//     sx.remove();
+// }
+
 
 function xDudak(){
     const div = document.createElement("div");
@@ -355,13 +364,68 @@ function xDudak(){
 
 div.style.position="fixed";
 div.style.backgroundColor="#fff";
-    body.insertBefore(div,slider);
+navbar.appendChild(div);
+// body.insertBefore(div,slider);
+body.addEventListener("mousemove",function(e){
+   if (e.target.className=="slider-img") {
+    const faceComponents = document.querySelector(".face-components");
+    // faceComponents.style.display="none";
+   try {
+    faceComponents.remove();
+   } catch (error) {
+       console.log("");
+   }
+    
+   }
+
+});
 }
 
-function xDudakClose(){
-    const sx = document.querySelector(".face-components");
-    sx.remove();
+// function xDudakClose(){
+//     const sx = document.querySelector(".face-components");
+//     sx.remove();
+// }
+
+function xOje(){
+    const div = document.createElement("div");
+    div.className="face-components";
+    div.innerHTML=`<div class="face-components">
+    <ul class="face-flex"> 
+        <div class="face-one menu">
+            <li>Parlatıcı</li>
+        </div>
+        <div class="face-two menu">
+            <li>Manikür Seti</li> 
+        </div>
+        <div class="face-three menu">
+            <li>Tırnak Bakım Fırçası</li> 
+        </div>
+        
+
+        
+    </ul> 
+</div>`
+
+div.style.position="fixed";
+div.style.backgroundColor="#fff";
+navbar.appendChild(div);
+// body.insertBefore(div,slider);
+body.addEventListener("mousemove",function(e){
+   if (e.target.className=="slider-img" || e.target.className=="flex-nav") {
+    const faceComponents = document.querySelector(".face-components");
+    // faceComponents.style.display="none";
+   try {
+    faceComponents.remove();
+   } catch (error) {
+       console.log("");
+   }
+    
+   }
+
+});
+
 }
+
 
 function xKaş(){
     const div = document.createElement("div");
@@ -381,12 +445,26 @@ function xKaş(){
 
 div.style.position="fixed";
 div.style.backgroundColor="#fff";
-    body.insertBefore(div,slider);
+navbar.appendChild(div);
+// body.insertBefore(div,slider);
+body.addEventListener("mousemove",function(e){
+   if (e.target.className=="slider-img") {
+    const faceComponents = document.querySelector(".face-components");
+    // faceComponents.style.display="none";
+   try {
+    faceComponents.remove();
+   } catch (error) {
+       console.log("");
+   }
+    
+   }
+
+});
 }
 
-function xKaşClose(){
-    const sx = document.querySelector(".face-components");
-    sx.remove();
-}
+// function xKaşClose(){
+//     const sx = document.querySelector(".face-components");
+//     sx.remove();
+// }
 
 

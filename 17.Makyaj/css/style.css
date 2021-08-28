@@ -4,13 +4,14 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Kaisei Decol', serif;
+    letter-spacing: 2px;
 }
 
 
 .top-flex{
     display: flex;
     width: 100vw;
-    background-color: yellowgreen;
+    background-color: #F3F4F6;
     justify-content: space-evenly;
     margin:0 auto;
     padding: 0.5rem;
@@ -86,7 +87,7 @@
 .dropdown{
     margin-top: 1rem;
     width: 100vw;
-    background-color: yellow;
+    background-color: #fff;
 }
 .drops{
     display: flex;
@@ -119,8 +120,7 @@
     /* margin: 0.1rem 6rem; */
     width: max-content;
     padding-top: 0.4rem;
-    
-
+    cursor: pointer;
 }
 .face-one{
     position:absolute;
@@ -177,4 +177,15 @@
     justify-content: center;
     align-items: center;
     align-self: center;
+}
+
+/************************** MOST SELLERS *************************************/
+
+.most-sellers-slide{
+    background-color: aqua;
+    width: 70vw;
+    margin: 0 auto;
+}
+.most-sellers-slide img{
+    width: 200px;
 }
