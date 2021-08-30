@@ -17,6 +17,22 @@ const ballonFive=document.querySelector(".ballon-five");
 const balons = document.querySelectorAll(".ballon");
 const divBallons= document.querySelector(".ballons");
 
+const mostSellersSlide = document.querySelectorAll(".product-details");
+
+
+
+// const productOne = document.querySelector(".productOne");
+// const productTwo = document.querySelector(".productTwo");
+// const productThree = document.querySelector(".productThree");
+// const productFour = document.querySelector(".productFour");
+// const productFive = document.querySelector(".productFive");
+// const productSix = document.querySelector(".productSix");
+// const productSeven = document.querySelector(".productSeven");
+// const productEight = document.querySelector(".productEight");
+// const productNine = document.querySelector(".productNine");
+// const productTen = document.querySelector(".productTen");
+
+
 
 
 
@@ -42,32 +58,244 @@ const models = [
 
 ];
 
+const photos= [
+
+    {
+        path:'./img/1.jpg',
+        hover:'./img/1-hover.jpg'
+    },
+    {
+        path:'./img/2.jpg',
+        hover:'./img/2-hover.jpg'
+    },
+    
+    {
+        path:'./img/3.jpg',
+        hover:'./img/3-hover.jpg'
+    },
+    
+    {
+        path:'./img/4.jpg',
+        hover:'./img/4-hover.jpg'
+    },
+    
+    {
+        path:'./img/5.jpg',
+        hover:'./img/5-hover.jpg'
+    },
+    
+    {
+        path:'./img/6.jpg',
+        hover:'./img/6-hover.jpg'
+    },
+    
+    {
+        path:'./img/7.jpg',
+        hover:'./img/7-hover.jpg'
+    },
+    {
+        path:'./img/8.jpg',
+        hover:'./img/8-hover.jpg'
+    },
+    {
+        path:'./img/9.jpg',
+        hover:'./img/9-hover.jpg'
+    },
+    
+    {
+        path:'./img/10.jpg',
+        hover:'./img/10-hover.jpg'
+    }
+    
+   
+    
+    
+];
+
 image.src=models[0].link;
 ballonZero.style.backgroundColor="black";
+
 
 allEvents();
 
 function allEvents(){
     startSlider();
+    hover();
+     
+            
     yüz.addEventListener("mouseenter",xYüz);
-    // yüz.addEventListener("mouseleave",xYüzClose);
     göz.addEventListener("mouseenter",xGöz);
-    // göz.addEventListener("mouseout",xGözClose);
     dudak.addEventListener("mouseenter",xDudak);
-    // dudak.addEventListener("mouseout",xDudakClose);
     kaş.addEventListener("mouseenter",xKaş);
-    // kaş.addEventListener("mouseout",xKaşClose);
     oje.addEventListener("mouseenter",xOje);
     slider.addEventListener("click",moveImage);
    
 
-    divBallons.addEventListener("mouseenter",function(){
+    divBallons.addEventListener("click",function(){
         clearInterval(interval);
-    });    
-    divBallons.addEventListener("mouseleave",function(){
-        startSlider();
-    }); 
+    });
 
+
+}
+
+
+function hover(){
+
+    mostSellersSlide.forEach(child=>{
+       
+        if (child.addEventListener("mouseenter",function(){
+
+            
+            if (child.classList.contains("productOne")) {
+                
+                child.children[1].attributes.src.value=photos[0].hover;
+                const faHeart = document.querySelector(".kalpOne");
+                faHeart.style.color="#F87171";
+
+            }
+
+              
+            if (child.classList.contains("productTwo")) {
+                
+                child.children[1].attributes.src.value=photos[1].hover;
+                const faHeart = document.querySelector(".kalpTwo");
+                faHeart.style.color="#F87171";
+            }
+    
+            if (child.classList.contains("productThree")) {
+                
+                child.children[1].attributes.src.value=photos[2].hover;
+                const faHeart = document.querySelector(".kalpThree");
+                faHeart.style.color="#F87171";
+            }
+    
+            if (child.classList.contains("productFour")) {
+                
+                child.children[1].attributes.src.value=photos[3].hover;
+                const faHeart = document.querySelector(".kalpFour");
+                faHeart.style.color="#F87171";
+            }
+    
+            if (child.classList.contains("productFive")) {
+                
+                child.children[1].attributes.src.value=photos[4].hover;
+                const faHeart = document.querySelector(".kalpFive");
+                faHeart.style.color="#F87171";
+            }
+    
+            if (child.classList.contains("productSix")) {
+                
+                child.children[1].attributes.src.value=photos[5].hover;
+                const faHeart = document.querySelector(".kalpSix");
+                faHeart.style.color="#F87171";
+            }
+    
+            if (child.classList.contains("productSeven")) {
+                
+                child.children[1].attributes.src.value=photos[6].hover;
+                const faHeart = document.querySelector(".kalpSeven");
+                faHeart.style.color="#F87171";
+            }
+    
+            if (child.classList.contains("productEight")) {
+                
+                child.children[1].attributes.src.value=photos[7].hover;
+                const faHeart = document.querySelector(".kalpEight");
+                faHeart.style.color="#F87171";
+            }
+    
+            if (child.classList.contains("productNine")) {
+                
+                child.children[1].attributes.src.value=photos[8].hover;
+                const faHeart = document.querySelector(".kalpNine");
+                faHeart.style.color="#F87171";
+            }
+    
+            if (child.classList.contains("productTen")) {
+                
+                child.children[1].attributes.src.value=photos[9].hover;
+                const faHeart = document.querySelector(".kalpTen");
+                faHeart.style.color="#F87171";
+            }
+
+
+        })); 
+        
+       
+        if (child.addEventListener("mouseleave",function(){
+
+            
+            if (child.classList.contains("productOne")) {
+                
+                child.children[1].attributes.src.value=photos[0].path;
+                const faHeart = document.querySelector(".kalpOne");
+                faHeart.style.color="";
+            }
+
+            if (child.classList.contains("productTwo")) {
+                
+                child.children[1].attributes.src.value=photos[1].path;
+                const faHeart = document.querySelector(".kalpTwo");
+                faHeart.style.color="";
+            }
+
+            if (child.classList.contains("productThree")) {
+                
+                child.children[1].attributes.src.value=photos[2].path;
+                const faHeart = document.querySelector(".kalpThree");
+                faHeart.style.color="";
+            }
+            if (child.classList.contains("productFour")) {
+                
+                child.children[1].attributes.src.value=photos[3].path;
+                const faHeart = document.querySelector(".kalpFour");
+                faHeart.style.color="";
+            }
+            if (child.classList.contains("productFive")) {
+                
+                child.children[1].attributes.src.value=photos[4].path;
+                const faHeart = document.querySelector(".kalpFive");
+                faHeart.style.color="";
+            }
+            if (child.classList.contains("productSix")) {
+                
+                child.children[1].attributes.src.value=photos[5].path;
+                const faHeart = document.querySelector(".kalpSix");
+                faHeart.style.color="";
+            }
+            if (child.classList.contains("productSeven")) {
+                
+                child.children[1].attributes.src.value=photos[6].path;
+                const faHeart = document.querySelector(".kalpSeven");
+                faHeart.style.color="";
+            }
+            if (child.classList.contains("productEight")) {
+                
+                child.children[1].attributes.src.value=photos[7].path;
+                const faHeart = document.querySelector(".kalpEight");
+                faHeart.style.color="";
+            }
+            if (child.classList.contains("productNine")) {
+                
+                child.children[1].attributes.src.value=photos[8].path;
+                const faHeart = document.querySelector(".kalpNine");
+                faHeart.style.color="";
+            }
+            if (child.classList.contains("productTen")) {
+                
+                child.children[1].attributes.src.value=photos[9].path;
+                const faHeart = document.querySelector(".kalpTen");
+                faHeart.style.color="";
+            }
+
+
+
+
+
+
+        })); 
+        
+            });
 
 
 }
@@ -145,8 +373,6 @@ function moveImage(e){
 
 }
 
-
-
 function startSlider(){
     image.src=models[0].link;
 
@@ -155,6 +381,7 @@ function startSlider(){
         
         if (curImg==0) {
         image.src=models[curImg].link;
+        
         ballonZero.style.backgroundColor="black";
         ballonOne.style.backgroundColor="#fff";
         ballonTwo.style.backgroundColor="#fff";
@@ -219,7 +446,7 @@ function startSlider(){
         curImg++;
        
        
-    },4000);
+    },2000);
 
 
     
@@ -227,9 +454,6 @@ function startSlider(){
 
 }
    
-    
-
-
 function xYüz(){
 
     const div = document.createElement("div");
@@ -260,31 +484,22 @@ function xYüz(){
     div.style.position="fixed";
     div.style.backgroundColor="#fff";
     navbar.appendChild(div);
-    // body.insertBefore(div,slider);
-    body.addEventListener("mousemove",function(e){
-       if (e.target.className=="slider-img") {
-        const faceComponents = document.querySelector(".face-components");
-        // faceComponents.style.display="none";
-       try {
-        faceComponents.remove();
-       } catch (error) {
-           console.log("");
-       }
-        
-       }
+    body.insertBefore(div,slider);
+body.addEventListener("mousemove",function(e){
+   if (e.target.className=="slider-img" || e.target.className=="flex-nav") {
+    const faceComponents = document.querySelector(".face-components");
+    faceComponents.style.display="none";
+   try {
+    faceComponents.remove();
+   } catch (error) {
+       console.log("");
+   }
+    
+   }
 
-    });
+});
+    
 }
-
-
-// function xYüzClose(){
-//     const sx = document.querySelector(".face-components");
-//     sx.remove();
-
-// }
-
-
-
 
 function xGöz(){
     const div = document.createElement("div");
@@ -313,11 +528,11 @@ function xGöz(){
 div.style.position="fixed";
 div.style.backgroundColor="#fff";
 navbar.appendChild(div);
-// body.insertBefore(div,slider);
+body.insertBefore(div,slider);
 body.addEventListener("mousemove",function(e){
-   if (e.target.className=="slider-img") {
+   if (e.target.className=="slider-img" || e.target.className=="flex-nav") {
     const faceComponents = document.querySelector(".face-components");
-    // faceComponents.style.display="none";
+    faceComponents.style.display="none";
    try {
     faceComponents.remove();
    } catch (error) {
@@ -330,12 +545,6 @@ body.addEventListener("mousemove",function(e){
 
 
 }
-
-
-// function xGözClose(){
-//     const sx = document.querySelector(".face-components");
-//     sx.remove();
-// }
 
 
 function xDudak(){
@@ -365,11 +574,11 @@ function xDudak(){
 div.style.position="fixed";
 div.style.backgroundColor="#fff";
 navbar.appendChild(div);
-// body.insertBefore(div,slider);
+body.insertBefore(div,slider);
 body.addEventListener("mousemove",function(e){
-   if (e.target.className=="slider-img") {
+   if (e.target.className=="slider-img" || e.target.className=="flex-nav") {
     const faceComponents = document.querySelector(".face-components");
-    // faceComponents.style.display="none";
+    faceComponents.style.display="none";
    try {
     faceComponents.remove();
    } catch (error) {
@@ -380,11 +589,6 @@ body.addEventListener("mousemove",function(e){
 
 });
 }
-
-// function xDudakClose(){
-//     const sx = document.querySelector(".face-components");
-//     sx.remove();
-// }
 
 function xOje(){
     const div = document.createElement("div");
@@ -409,11 +613,11 @@ function xOje(){
 div.style.position="fixed";
 div.style.backgroundColor="#fff";
 navbar.appendChild(div);
-// body.insertBefore(div,slider);
+body.insertBefore(div,slider);
 body.addEventListener("mousemove",function(e){
    if (e.target.className=="slider-img" || e.target.className=="flex-nav") {
     const faceComponents = document.querySelector(".face-components");
-    // faceComponents.style.display="none";
+    faceComponents.style.display="none";
    try {
     faceComponents.remove();
    } catch (error) {
@@ -425,7 +629,6 @@ body.addEventListener("mousemove",function(e){
 });
 
 }
-
 
 function xKaş(){
     const div = document.createElement("div");
@@ -446,11 +649,11 @@ function xKaş(){
 div.style.position="fixed";
 div.style.backgroundColor="#fff";
 navbar.appendChild(div);
-// body.insertBefore(div,slider);
+body.insertBefore(div,slider);
 body.addEventListener("mousemove",function(e){
-   if (e.target.className=="slider-img") {
+   if (e.target.className=="slider-img" || e.target.className=="flex-nav") {
     const faceComponents = document.querySelector(".face-components");
-    // faceComponents.style.display="none";
+    faceComponents.style.display="none";
    try {
     faceComponents.remove();
    } catch (error) {
@@ -461,10 +664,4 @@ body.addEventListener("mousemove",function(e){
 
 });
 }
-
-// function xKaşClose(){
-//     const sx = document.querySelector(".face-components");
-//     sx.remove();
-// }
-
 

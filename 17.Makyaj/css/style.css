@@ -176,16 +176,45 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    align-self: center;
+  
 }
 
 /************************** MOST SELLERS *************************************/
 
 .most-sellers-slide{
-    background-color: aqua;
-    width: 70vw;
-    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+   max-width: fit-content;
+    background-color: #fff;
+    margin: 1rem auto;
+    grid-gap: 1rem;
 }
-.most-sellers-slide img{
-    width: 200px;
+.most-sellers-slide span{
+    font-size: larger;
+}
+
+
+.most-sellers img{
+    width: 220px;
+    height: 300px;
+}
+
+.product-details{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+   
+}
+.product-details:hover{
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+   
+}
+
+.details{
+    letter-spacing: 0;
+    max-width: fit-content;
+    
 }

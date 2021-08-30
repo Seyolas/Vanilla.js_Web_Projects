@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+  }
+
 a{
     text-decoration: none;
 }
@@ -12,4 +16,13 @@ hr{
 }
 .face-flex li:hover{
     font-weight: bolder;
+}
+
+.fa-heart{
+   position: relative;
+   left: 90px;
+   top: 30px;
+   font-size: large;
+  color:#D1D5DB;
+
 }
