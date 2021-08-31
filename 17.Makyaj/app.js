@@ -62,49 +62,68 @@ const photos= [
 
     {
         path:'./img/1.jpg',
-        hover:'./img/1-hover.jpg'
+        hover:'./img/1-hover.jpg',
+        pathYuz:'./img/yuzUrunler/yuz1.jpg',
+        hoverYuz:'./img/yuzUrunler/yuz-1hover.jpg'
     },
     {
         path:'./img/2.jpg',
-        hover:'./img/2-hover.jpg'
+        hover:'./img/2-hover.jpg',
+        pathYuz:'./img/yuzUrunler/yuz2.jpg',
+        hoverYuz:'./img/yuzUrunler/yuz-2hover.jpg'
     },
     
     {
         path:'./img/3.jpg',
-        hover:'./img/3-hover.jpg'
+        hover:'./img/3-hover.jpg',
+        pathYuz:'./img/yuzUrunler/yuz3.jpg',
+        hoverYuz:'./img/yuzUrunler/yuz-3hover.jpg'
     },
     
     {
         path:'./img/4.jpg',
-        hover:'./img/4-hover.jpg'
+        hover:'./img/4-hover.jpg',
+        pathYuz:'./img/yuzUrunler/yuz4.jpg',
+        hoverYuz:'./img/yuzUrunler/yuz-4hover.jpg'
     },
     
     {
         path:'./img/5.jpg',
-        hover:'./img/5-hover.jpg'
+        hover:'./img/5-hover.jpg',
+        pathYuz:'./img/yuzUrunler/yuz5.jpg',
+        hoverYuz:'./img/yuzUrunler/yuz-5hover.jpg'
     },
     
     {
         path:'./img/6.jpg',
-        hover:'./img/6-hover.jpg'
+        hover:'./img/6-hover.jpg',
+        pathYuz:'./img/yuzUrunler/yuz6.jpg',
+        hoverYuz:'./img/yuzUrunler/yuz-6hover.jpg'
     },
     
     {
         path:'./img/7.jpg',
-        hover:'./img/7-hover.jpg'
+        hover:'./img/7-hover.jpg',
+        pathYuz:'./img/yuzUrunler/yuz7.jpg',
+        hoverYuz:'./img/yuzUrunler/yuz-7hover.jpg'
     },
     {
         path:'./img/8.jpg',
-        hover:'./img/8-hover.jpg'
+        hover:'./img/8-hover.jpg',
+        pathYuz:'./img/yuzUrunler/yuz8.jpg',
+        hoverYuz:'./img/yuzUrunler/yuz-8hover.jpg'
     },
     {
         path:'./img/9.jpg',
-        hover:'./img/9-hover.jpg'
+        hover:'./img/9-hover.jpg',
+        pathYuz:'./img/yuzUrunler/yuz9.jpg',
+        hoverYuz:'./img/yuzUrunler/yuz-9hover.jpg'
     },
     
     {
         path:'./img/10.jpg',
         hover:'./img/10-hover.jpg'
+     
     }
     
    
@@ -218,6 +237,14 @@ function hover(){
                 faHeart.style.color="#F87171";
             }
 
+            if (child.classList.contains("yuzOne")) {
+                child.children[1].attributes.src.value=photos[0].hoverYuz;
+                
+           }
+
+
+
+
 
         })); 
         
@@ -288,9 +315,13 @@ function hover(){
                 faHeart.style.color="";
             }
 
+            if (child.classList.contains("yuzOne")) {
+                child.children[1].attributes.src.value=photos[0].pathYuz;
+                
+                
+           }
 
-
-
+           
 
 
         })); 

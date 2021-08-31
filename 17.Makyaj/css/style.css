@@ -171,15 +171,18 @@
 }
 
 
+/************************** MOST SELLERS *************************************/
 
 .most-header{
+    letter-spacing: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-  
+    font-weight: bolder;
+    z-index: 1;
+    
 }
 
-/************************** MOST SELLERS *************************************/
 
 .most-sellers-slide{
     display: grid;
@@ -190,7 +193,8 @@
     grid-gap: 1rem;
 }
 .most-sellers-slide span{
-    font-size: larger;
+    font-size:larger;
+    font-weight: bolder;
 }
 
 
@@ -214,7 +218,11 @@
 }
 
 .details{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     letter-spacing: 0;
     max-width: fit-content;
-    
+    /* font-weight: 500; */
+    font-size:medium;
 }
+
+/**************************ÇOK SATANLAR******************************/
