@@ -8,37 +8,40 @@
 }
 
 
+.top-little-head{
+    background-color: #E5E7EB;
+    max-width: 100vw;
+    margin: 0 auto;
+    
+}
 .top-flex{
     display: flex;
-    width: 100vw;
-    background-color: #F3F4F6;
-    justify-content: space-evenly;
-    margin:0 auto;
+    justify-content: space-around;
     padding: 0.5rem;
 }
-.top-flex .top-number{ /*mobilde kaldır*/
-    position: relative;
-    right: 300px;
+.top-flex .top-number{
+    position:absolute;
+    left: 10px;
+    letter-spacing: 0;
 }
 .top-flex .top-cargo{
-    position: relative;
-    left: 300px;
+    position:absolute;
+    right: 10px;
+    letter-spacing: 0;
 }
-
-/*top-little-head*/
+.top-flex .mx{
+    font-weight: bolder;
+    letter-spacing: 0;
+}
 
 .flex-nav{
     display: flex;
     width: 100vw;
-    justify-content: space-evenly;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    justify-content: space-around;
+    padding: 0.5rem;
+    margin: 0 auto;
 }
 
-#note{
-    position: relative;
-    right: 150px;
-}
 
 .search {
     display: flex;
@@ -59,12 +62,12 @@
     font-weight:500; 
 }
 
-
-.informations{
-    position: relative;
-    left: 120px;
+/* .informations{
+    margin-left: 7rem;
 }
-
+#note{
+    margin-right: 1rem;
+} */
 
 .Ux{
     display: flex;
@@ -90,6 +93,7 @@
     background-color: #fff;
 }
 .drops{
+    
     display: flex;
     justify-content: center;
     align-self: center;
@@ -137,10 +141,12 @@
     margin-top: 1.2rem;
 }
 /*slider*/
-
+.slider{
+    width: 99vw;
+}
 .slider-img{
     margin-top: 2rem;
-    width: 100vw;
+    width: 99vw;
     height: 62vh;
     cursor: pointer;
    
@@ -180,14 +186,14 @@
     align-items: center;
     font-weight: bolder;
     z-index: 1;
-    
+
 }
 
 
 .most-sellers-slide{
     display: grid;
     grid-template-columns: repeat(5,1fr);
-   max-width: fit-content;
+   max-width:fit-content;
     background-color: #fff;
     margin: 1rem auto;
     grid-gap: 1rem;
@@ -226,3 +232,66 @@
 }
 
 /**************************ÇOK SATANLAR******************************/
+
+
+.little{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5rem;
+    /* letter-spacing: 0; */
+}
+.little input{
+    width: 350px;
+    padding: 0.3rem 1rem;
+    outline: none;
+    border: 1px solid rgb(196, 192, 192);
+}
+.little button{
+    padding: 0.3rem 1.2rem;
+    color:#fff;
+    background-color: #1F2937;
+    cursor: pointer;
+    letter-spacing: 0;  
+}
+.little button:hover{
+    opacity: 0.7;
+    transition: 0.5s all;
+}
+.little p{
+    letter-spacing: 0;
+    margin: 0.5rem 0;
+    font-size:0.9rem;
+}
+.little h3{
+    letter-spacing: 0;
+}
+/************************footer****************************/
+
+footer{
+    max-width: fit-content;
+    margin: 0 auto;
+    margin-top: 3rem;
+}
+
+footer ul{
+    margin: 4rem;
+    letter-spacing: 0;
+    
+    
+}
+.footerx ul li a{
+    letter-spacing: 0;
+    color:#9CA3AF;
+    margin-top: 0.4rem;
+    
+}
+
+footer ul li a:hover{
+    text-decoration: underline;
+    
+}
+.oi li{
+    margin-top: 0.4rem;
+}

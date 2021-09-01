@@ -19,20 +19,9 @@ const divBallons= document.querySelector(".ballons");
 
 const mostSellersSlide = document.querySelectorAll(".product-details");
 
+const aciklama = document.querySelector(".acıklama-text");
 
-
-// const productOne = document.querySelector(".productOne");
-// const productTwo = document.querySelector(".productTwo");
-// const productThree = document.querySelector(".productThree");
-// const productFour = document.querySelector(".productFour");
-// const productFive = document.querySelector(".productFive");
-// const productSix = document.querySelector(".productSix");
-// const productSeven = document.querySelector(".productSeven");
-// const productEight = document.querySelector(".productEight");
-// const productNine = document.querySelector(".productNine");
-// const productTen = document.querySelector(".productTen");
-
-
+const showmore = document.querySelector(".showmore");
 
 
 
@@ -64,65 +53,92 @@ const photos= [
         path:'./img/1.jpg',
         hover:'./img/1-hover.jpg',
         pathYuz:'./img/yuzUrunler/yuz1.jpg',
-        hoverYuz:'./img/yuzUrunler/yuz-1hover.jpg'
+        hoverYuz:'./img/yuzUrunler/yuz-1hover.jpg',
+        pathGoz:'/img/gozUrunler/1.jpg',
+        hoverGoz:'/img/gozUrunler/hover1.jpg',
+        pathFirsat:'./img/firsatUrunler/1.jpg',
+        hoverFirsat:'./img/firsatUrunler/hover1.jpg'
     },
     {
-        path:'./img/2.jpg',
-        hover:'./img/2-hover.jpg',
+        path:'./img/8.jpg',
+        hover:'./img/8-hover.jpg',
         pathYuz:'./img/yuzUrunler/yuz2.jpg',
-        hoverYuz:'./img/yuzUrunler/yuz-2hover.jpg'
+        hoverYuz:'./img/yuzUrunler/yuz-2hover.jpg',
+        pathGoz:'/img/gozUrunler/2.jpg',
+        hoverGoz:'/img/gozUrunler/hover2.jpg',
+        pathFirsat:'./img/firsatUrunler/2.jpg',
+        hoverFirsat:'./img/firsatUrunler/hover2.jpg'
     },
     
     {
         path:'./img/3.jpg',
         hover:'./img/3-hover.jpg',
         pathYuz:'./img/yuzUrunler/yuz3.jpg',
-        hoverYuz:'./img/yuzUrunler/yuz-3hover.jpg'
+        hoverYuz:'./img/yuzUrunler/yuz-3hover.jpg',
+        pathGoz:'/img/gozUrunler/3.jpg',
+        hoverGoz:'/img/gozUrunler/hover3.jpg',
+        pathFirsat:'./img/firsatUrunler/3.jpg',
+        hoverFirsat:'./img/firsatUrunler/hover3.jpg'
+        
     },
     
     {
         path:'./img/4.jpg',
         hover:'./img/4-hover.jpg',
         pathYuz:'./img/yuzUrunler/yuz4.jpg',
-        hoverYuz:'./img/yuzUrunler/yuz-4hover.jpg'
+        hoverYuz:'./img/yuzUrunler/yuz-4hover.jpg',
+        pathGoz:'/img/gozUrunler/4.jpg',
+        hoverGoz:'/img/gozUrunler/hover4.jpg'
     },
     
     {
         path:'./img/5.jpg',
         hover:'./img/5-hover.jpg',
         pathYuz:'./img/yuzUrunler/yuz5.jpg',
-        hoverYuz:'./img/yuzUrunler/yuz-5hover.jpg'
+        hoverYuz:'./img/yuzUrunler/yuz-5hover.jpg',
+        pathGoz:'/img/gozUrunler/5.jpg',
+        hoverGoz:'/img/gozUrunler/hover5.jpg'
     },
     
     {
         path:'./img/6.jpg',
         hover:'./img/6-hover.jpg',
         pathYuz:'./img/yuzUrunler/yuz6.jpg',
-        hoverYuz:'./img/yuzUrunler/yuz-6hover.jpg'
+        hoverYuz:'./img/yuzUrunler/yuz-6hover.jpg',
+        pathGoz:'/img/gozUrunler/6.jpg',
+        hoverGoz:'/img/gozUrunler/hover6.jpg'
     },
     
     {
         path:'./img/7.jpg',
         hover:'./img/7-hover.jpg',
         pathYuz:'./img/yuzUrunler/yuz7.jpg',
-        hoverYuz:'./img/yuzUrunler/yuz-7hover.jpg'
+        hoverYuz:'./img/yuzUrunler/yuz-7hover.jpg',
+        pathGoz:'/img/gozUrunler/7.jpg',
+        hoverGoz:'/img/gozUrunler/hover7.jpg'
     },
     {
-        path:'./img/8.jpg',
-        hover:'./img/8-hover.jpg',
+        path:'./img/2.jpg',
+        hover:'./img/2-hover.jpg',
         pathYuz:'./img/yuzUrunler/yuz8.jpg',
-        hoverYuz:'./img/yuzUrunler/yuz-8hover.jpg'
+        hoverYuz:'./img/yuzUrunler/yuz-8hover.jpg',
+        pathGoz:'/img/gozUrunler/8.jpg',
+        hoverGoz:'/img/gozUrunler/hover8.jpg'
     },
     {
         path:'./img/9.jpg',
         hover:'./img/9-hover.jpg',
         pathYuz:'./img/yuzUrunler/yuz9.jpg',
-        hoverYuz:'./img/yuzUrunler/yuz-9hover.jpg'
+        hoverYuz:'./img/yuzUrunler/yuz-9hover.jpg',
+        pathGoz:'/img/gozUrunler/9.jpg',
+        hoverGoz:'/img/gozUrunler/hover9.jpg'
     },
     
     {
         path:'./img/10.jpg',
-        hover:'./img/10-hover.jpg'
+        hover:'./img/10-hover.jpg',
+        pathGoz:'/img/gozUrunler/10.jpg',
+        hoverGoz:'/img/gozUrunler/hover10.jpg'
      
     }
     
@@ -138,10 +154,11 @@ ballonZero.style.backgroundColor="black";
 allEvents();
 
 function allEvents(){
+
     startSlider();
     hover();
-     
-            
+    
+    showmore.addEventListener("click",xShowMore);
     yüz.addEventListener("mouseenter",xYüz);
     göz.addEventListener("mouseenter",xGöz);
     dudak.addEventListener("mouseenter",xDudak);
@@ -156,6 +173,27 @@ function allEvents(){
 
 
 }
+
+
+let x =0;
+function xShowMore(e){
+    x++;
+    // const mystyle = document.querySelector(".q");
+
+    aciklama.classList.toggle("mystyle");
+    
+    if (x%2==1) {
+        showmore.textContent="Daha Az Göster";
+    }
+    else
+    showmore.textContent="Daha Fazla Göster";
+  
+    e.preventDefault();
+}
+
+
+
+
 
 
 function hover(){
@@ -237,18 +275,163 @@ function hover(){
                 faHeart.style.color="#F87171";
             }
 
+            /*******************yüz ürünleri**********************/
+
             if (child.classList.contains("yuzOne")) {
                 child.children[1].attributes.src.value=photos[0].hoverYuz;
+                const faHeart = document.querySelector(".kalpOneYuz");
+                faHeart.style.color="#F87171";
                 
            }
 
+           if (child.classList.contains("yuzTwo")) {
+            child.children[1].attributes.src.value=photos[1].hoverYuz;
+            const faHeart = document.querySelector(".kalpTwoYuz");
+            faHeart.style.color="#F87171";
+            
+            }
 
+            if (child.classList.contains("yuzThree")) {
+                child.children[1].attributes.src.value=photos[2].hoverYuz;
+                const faHeart = document.querySelector(".kalpThreeYuz");
+                faHeart.style.color="#F87171";
+                
+           }
 
+           if (child.classList.contains("yuzFour")) {
+            child.children[1].attributes.src.value=photos[3].hoverYuz;
+            const faHeart = document.querySelector(".kalpFourYuz");
+            faHeart.style.color="#F87171";
+            
+            }
 
+            if (child.classList.contains("yuzFive")) {
+                child.children[1].attributes.src.value=photos[4].hoverYuz;
+                const faHeart = document.querySelector(".kalpFiveYuz");
+                faHeart.style.color="#F87171";
+                
+           }
+
+           if (child.classList.contains("yuzSix")) {
+            child.children[1].attributes.src.value=photos[5].hoverYuz;
+            const faHeart = document.querySelector(".kalpSixYuz");
+            faHeart.style.color="#F87171";
+            
+            }
+
+            if (child.classList.contains("yuzSeven")) {
+                child.children[1].attributes.src.value=photos[6].hoverYuz;
+                const faHeart = document.querySelector(".kalpSevenYuz");
+                faHeart.style.color="#F87171";
+                
+            }
+
+            if (child.classList.contains("yuzEight")) {
+                child.children[1].attributes.src.value=photos[7].hoverYuz;
+                const faHeart = document.querySelector(".kalpEightYuz");
+                faHeart.style.color="#F87171";
+                
+            }
+    
+
+            if (child.classList.contains("yuzNine")) {
+                child.children[1].attributes.src.value=photos[8].hoverYuz;
+                const faHeart = document.querySelector(".kalpNineYuz");
+                faHeart.style.color="#F87171";
+                
+            }
+            
+
+            /*********************göz ürünler***********************/
+
+            if (child.classList.contains("gozOne")) {
+                child.children[1].attributes.src.value=photos[0].hoverGoz;
+                const faHeart = document.querySelector(".kalpOneGoz");
+                faHeart.style.color="#F87171";
+                
+           }
+
+           if (child.classList.contains("gozTwo")) {
+            child.children[1].attributes.src.value=photos[1].hoverGoz;
+            const faHeart = document.querySelector(".kalpTwoGoz");
+            faHeart.style.color="#F87171";
+            
+            }
+
+            if (child.classList.contains("gozThree")) {
+                child.children[1].attributes.src.value=photos[2].hoverGoz;
+                const faHeart = document.querySelector(".kalpThreeGoz");
+                faHeart.style.color="#F87171";
+            }
+
+            if (child.classList.contains("gozFour")) {
+                child.children[1].attributes.src.value=photos[3].hoverGoz;
+                const faHeart = document.querySelector(".kalpFourGoz");
+                faHeart.style.color="#F87171";
+            }
+            if (child.classList.contains("gozFive")) {
+                child.children[1].attributes.src.value=photos[4].hoverGoz;
+                const faHeart = document.querySelector(".kalpFiveGoz");
+                faHeart.style.color="#F87171";
+            }
+
+            if (child.classList.contains("gozSix")) {
+                child.children[1].attributes.src.value=photos[5].hoverGoz;
+                const faHeart = document.querySelector(".kalpSixGoz");
+                faHeart.style.color="#F87171";
+            }
+
+            if (child.classList.contains("gozSeven")) {
+                child.children[1].attributes.src.value=photos[6].hoverGoz;
+                const faHeart = document.querySelector(".kalpSevenGoz");
+                faHeart.style.color="#F87171";
+            }
+
+            if (child.classList.contains("gozEight")) {
+                child.children[1].attributes.src.value=photos[7].hoverGoz;
+                const faHeart = document.querySelector(".kalpEightGoz");
+                faHeart.style.color="#F87171";
+            }
+
+            if (child.classList.contains("gozNine")) {
+                child.children[1].attributes.src.value=photos[8].hoverGoz;
+                const faHeart = document.querySelector(".kalpNineGoz");
+                faHeart.style.color="#F87171";
+            }
+            if (child.classList.contains("gozTen")) {
+                child.children[1].attributes.src.value=photos[9].hoverGoz;
+                const faHeart = document.querySelector(".kalpTenGoz");
+                faHeart.style.color="#F87171";
+            }
+
+            /*********************firsat ürünler***********************/
+
+            if (child.classList.contains("firsatOne")) {
+                child.children[1].attributes.src.value=photos[0].hoverFirsat;
+                const faHeart = document.querySelector(".kalpOneFirsat");
+                faHeart.style.color="#F87171";
+                
+           }
+
+           if (child.classList.contains("firsatTwo")) {
+            child.children[1].attributes.src.value=photos[1].hoverFirsat;
+            const faHeart = document.querySelector(".kalpTwoFirsat");
+            faHeart.style.color="#F87171";
+            
+            }
+       
+          if (child.classList.contains("firsatThree")) {
+            child.children[1].attributes.src.value=photos[2].hoverFirsat;
+            const faHeart = document.querySelector(".kalpThreeFirsat");
+            faHeart.style.color="#F87171";
+        
+           }
+   
+           
 
         })); 
         
-       
+
         if (child.addEventListener("mouseleave",function(){
 
             
@@ -315,19 +498,151 @@ function hover(){
                 faHeart.style.color="";
             }
 
-            if (child.classList.contains("yuzOne")) {
-                child.children[1].attributes.src.value=photos[0].pathYuz;
-                
-                
-           }
-
+         
            
+                    /*******************yüz ürünleri**********************/
+
+                if (child.classList.contains("yuzOne")) {
+                    child.children[1].attributes.src.value=photos[0].pathYuz; 
+                    const faHeart = document.querySelector(".kalpOneYuz");
+                    faHeart.style.color="";
+                }
+        
+                if (child.classList.contains("yuzTwo")) {
+                    child.children[1].attributes.src.value=photos[1].pathYuz; 
+                    const faHeart = document.querySelector(".kalpTwoYuz");
+                    faHeart.style.color="";   
+                }
+                if (child.classList.contains("yuzThree")) {
+                    child.children[1].attributes.src.value=photos[2].pathYuz;
+                    const faHeart = document.querySelector(".kalpThreeYuz");
+                    faHeart.style.color="";   
+                }
+                if (child.classList.contains("yuzFour")) {
+                    child.children[1].attributes.src.value=photos[3].pathYuz;
+                    const faHeart = document.querySelector(".kalpFourYuz");
+                    faHeart.style.color="";   
+                }
+                if (child.classList.contains("yuzFive")) {
+                    child.children[1].attributes.src.value=photos[4].pathYuz;
+                    const faHeart = document.querySelector(".kalpFiveYuz");
+                    faHeart.style.color="";      
+                }
+                if (child.classList.contains("yuzSix")) {
+                    child.children[1].attributes.src.value=photos[5].pathYuz;
+                    const faHeart = document.querySelector(".kalpSixYuz");
+                    faHeart.style.color="";      
+                }
+                if (child.classList.contains("yuzSeven")) {
+                    child.children[1].attributes.src.value=photos[6].pathYuz;
+                    const faHeart = document.querySelector(".kalpSevenYuz");
+                    faHeart.style.color="";      
+                }
+                if (child.classList.contains("yuzEight")) {
+                    child.children[1].attributes.src.value=photos[7].pathYuz;
+                    const faHeart = document.querySelector(".kalpEightYuz");
+                    faHeart.style.color="";      
+                }
+                if (child.classList.contains("yuzNine")) {
+                    child.children[1].attributes.src.value=photos[8].pathYuz;
+                    const faHeart = document.querySelector(".kalpNineYuz");
+                    faHeart.style.color="";      
+                }
+        
+                /********************goz urunler************************ */
+
+                if (child.classList.contains("gozOne")) {
+                    child.children[1].attributes.src.value=photos[0].pathGoz;
+                    const faHeart = document.querySelector(".kalpOneGoz");
+                    faHeart.style.color="";
+                    
+               }
+    
+               if (child.classList.contains("gozTwo")) {
+                   child.children[1].attributes.src.value=photos[1].pathGoz;
+                   const faHeart = document.querySelector(".kalpTwoGoz");
+                faHeart.style.color="";
+                
+                }
+    
+                if (child.classList.contains("gozThree")) {
+                    child.children[1].attributes.src.value=photos[2].pathGoz;
+                    const faHeart = document.querySelector(".kalpThreeGoz");
+                    faHeart.style.color="";
+                }
+    
+                if (child.classList.contains("gozFour")) {
+                    child.children[1].attributes.src.value=photos[3].pathGoz;
+                    const faHeart = document.querySelector(".kalpFourGoz");
+                    faHeart.style.color="";
+                }
+                if (child.classList.contains("gozFive")) {
+                    child.children[1].attributes.src.value=photos[4].pathGoz;
+                    const faHeart = document.querySelector(".kalpFiveGoz");
+                    faHeart.style.color="";
+                }
+    
+                if (child.classList.contains("gozSix")) {
+                    child.children[1].attributes.src.value=photos[5].pathGoz;
+                    const faHeart = document.querySelector(".kalpSixGoz");
+                    faHeart.style.color="";
+                }
+    
+                if (child.classList.contains("gozSeven")) {
+                    child.children[1].attributes.src.value=photos[6].pathGoz;
+                    const faHeart = document.querySelector(".kalpSevenGoz");
+                    faHeart.style.color="";
+                }
+    
+                if (child.classList.contains("gozEight")) {
+                    child.children[1].attributes.src.value=photos[7].pathGoz;
+                    const faHeart = document.querySelector(".kalpEightGoz");
+                    faHeart.style.color="";
+                }
+    
+                if (child.classList.contains("gozNine")) {
+                    child.children[1].attributes.src.value=photos[8].pathGoz;
+                    const faHeart = document.querySelector(".kalpNineGoz");
+                    faHeart.style.color="";
+                }
+                
+                if (child.classList.contains("gozTen")) {
+                    child.children[1].attributes.src.value=photos[9].pathGoz;
+                    const faHeart = document.querySelector(".kalpTenGoz");
+                    faHeart.style.color="";
+                }
+    
+             /********************Fırsat urunler************************ */
+
+
+                if (child.classList.contains("firsatOne")) {
+                    child.children[1].attributes.src.value=photos[0].pathFirsat;
+                    const faHeart = document.querySelector(".kalpOneFirsat");
+                    faHeart.style.color="";
+                    
+               }
+    
+               if (child.classList.contains("firsatTwo")) {
+                child.children[1].attributes.src.value=photos[1].pathFirsat;
+                const faHeart = document.querySelector(".kalpTwoFirsat");
+                faHeart.style.color="";
+                
+                }
+           
+              if (child.classList.contains("firsatThree")) {
+                child.children[1].attributes.src.value=photos[2].pathFirsat;
+                const faHeart = document.querySelector(".kalpThreeFirsat");
+                faHeart.style.color="";
+            
+               }
+       
+
 
 
         })); 
         
-            });
 
+    });
 
 }
 
@@ -694,5 +1009,6 @@ body.addEventListener("mousemove",function(e){
    }
 
 });
+
 }
 
