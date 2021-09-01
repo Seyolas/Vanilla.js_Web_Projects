@@ -1,0 +1,72 @@
+
+.top-little-head{
+    display: none;
+}
+
+#navbar{
+    display: none;
+}
+
+.flex-nav{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Ux{
+    display: none;
+}
+
+#note{
+   
+    width: 100px;
+    margin: 1rem 11rem;
+    margin-top: 0;
+
+}
+.search input{
+  position: relative;
+  top: 50px;
+  right:10px;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding: 0.3rem 0.3rem;
+}
+.search span{
+    position: relative;
+    top: 51px;
+    right: 16px;
+    padding: 0.4rem;
+}
+.top-hr{
+    display: none;
+}
+
+.ballons{
+    bottom: 25px;
+    left: 200px;
+    z-index: 2;
+}
+.slider-img{
+    margin-top: 2rem;
+    height: 30vh;
+}
+
+.most-sellers-slide{
+    
+    grid-template-columns: repeat(2,1fr);
+    ;
+ 
+}
+footer ul{
+    margin: 0.1rem;
+    letter-spacing: 0;
+
+}
+
+.son{
+    width: 90vw;
+    margin: 0 1rem;
+    margin-top: 1rem;
+}

@@ -25,6 +25,7 @@ const showmore = document.querySelector(".showmore");
 
 
 
+
 const models = [
     {          
         link : 'https://www.noteshop.com.tr/Uploads/Slider/ar-175.gif?t=20210810161959'
@@ -157,7 +158,7 @@ function allEvents(){
 
     startSlider();
     hover();
-    
+    checkScrool();
     showmore.addEventListener("click",xShowMore);
     yüz.addEventListener("mouseenter",xYüz);
     göz.addEventListener("mouseenter",xGöz);
@@ -171,6 +172,17 @@ function allEvents(){
         clearInterval(interval);
     });
 
+
+}
+
+
+
+function checkScrool(){
+   
+    let scroll =document.documentElement.scrollTop;
+    if (scroll==100) {
+        console.log("333");
+    }
 
 }
 

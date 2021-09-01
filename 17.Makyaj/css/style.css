@@ -1,9 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Kaisei+Decol&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kaisei+HarunoUmi:wght@500&family=Roboto:wght@300&display=swap');
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Kaisei Decol', serif;
+    font-family: 'Kaisei HarunoUmi', serif;
+    font-family: 'Roboto', sans-serif;
     letter-spacing: 2px;
 }
 
@@ -28,28 +30,31 @@
     position:absolute;
     right: 10px;
     letter-spacing: 0;
+    cursor: pointer;
 }
 .top-flex .mx{
     font-weight: bolder;
     letter-spacing: 0;
 }
 
+
+/******************************TOP*****************************/
+
 .flex-nav{
+    margin:1rem auto;
     display: flex;
-    width: 100vw;
     justify-content: space-around;
-    padding: 0.5rem;
-    margin: 0 auto;
+    max-width: 100vw; 
+}
+
+#note{
+    position:absolute;
+    left: 10px;
 }
 
 
-.search {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    align-self: center;   
 
-}
+
 .search input{
     width: 358px;
     padding: 0.5rem 0.5rem;
@@ -60,30 +65,67 @@
     padding: 0.5rem 2rem;
     color:#fff;
     font-weight:500; 
+    cursor: pointer;
+    letter-spacing: 0;
 }
-
-/* .informations{
-    margin-left: 7rem;
-}
-#note{
-    margin-right: 1rem;
-} */
 
 .Ux{
     display: flex;
+    position: absolute;
+    right: 10px;
     
 }
 
 .Ux li{
    padding: 0.2rem 0.5rem;
+
+}
+.Ux a{
+    letter-spacing: 0;
+}
+.pr-1{
+    cursor: pointer;
+    display: flex;
+    position: relative;
+    left: 35px;
+    bottom: 47px;
+    padding: 0.1rem 0.5rem;
+    margin: 0.1rem 0.8rem;
 }
 
+.pr-1:hover{
+     opacity: 0.8;
+}
+
+.pr-1 pre{
+    letter-spacing: 0;
+}
+.mxy{
+    cursor: pointer;
+    letter-spacing: 0;
+}
+.mxy:hover{
+    opacity: 0.8;
+}
+
+
 .fa-user, .fa-shopping-bag{
-    padding: 1rem;
+    padding: 0.7rem;
     font-size: 20px;
-    border:solid 1px black;
+    border:solid 1px #E5E7EB;
     border-radius: 50%;
 }
+.fa-shopping-bag:hover{
+
+    border:solid 1px black;
+    
+}
+.fa-user:hover{
+    border: solid 1px black;
+}
+
+
+
 /*header*/
 
 
@@ -93,7 +135,7 @@
     background-color: #fff;
 }
 .drops{
-    
+    font-weight: bolder;
     display: flex;
     justify-content: center;
     align-self: center;
