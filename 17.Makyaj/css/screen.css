@@ -1,0 +1,11 @@
+/* .search .ara{
+    width: 4vw;
+    color:red;
+    text-align: center;
+    align-self: center;
+    
+} */
+
+.most-sellers-slide{
+    grid-template-columns: repeat(4,1fr);
+}

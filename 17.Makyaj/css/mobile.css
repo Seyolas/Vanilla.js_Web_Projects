@@ -18,47 +18,95 @@
     display: none;
 }
 
+.most-sellers{
+   
+    width: 400px;
+}
+
 #note{
    
     width: 100px;
-    margin: 1rem 11rem;
+    /* margin: 1rem 11rem; */
     margin-top: 0;
 
 }
-.search input{
-  position: relative;
-  top: 50px;
-  right:10px;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  padding: 0.3rem 0.3rem;
+
+
+ .search input{
+    width: 75vw;
+    padding: 0.3rem 0.3rem;
+  
+   
+
 }
-.search span{
-    position: relative;
-    top: 51px;
-    right: 16px;
-    padding: 0.4rem;
+
+.search .ara{
+    width: 6vw;
+    padding: 0.3rem 0.3rem;
 }
+ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .top-hr{
     display: none;
 }
 
-.ballons{
-    bottom: 25px;
-    left: 200px;
-    z-index: 2;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
 .slider-img{
     margin-top: 2rem;
     height: 30vh;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .most-sellers-slide{
     
     grid-template-columns: repeat(2,1fr);
-    ;
+    grid-gap: 0.2rem;
+    width: 100vw;
+    margin: 0 1rem;
  
 }
+
 footer ul{
     margin: 0.1rem;
     letter-spacing: 0;

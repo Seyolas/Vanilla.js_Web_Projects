@@ -29,6 +29,9 @@ li{
 
 }
 
+.ara:hover{
+    opacity: 0.8;
+}
 .hr-text{
     line-height: 1em;
     position: relative;
@@ -66,11 +69,14 @@ li{
 .alt{
 font-size: x-large;
 font-weight: normal;
+text-align: center;
 
 }
 .acıklama-text{
     font-size: small;
     letter-spacing: 0;
+    margin: 0 5rem;
+
 }
 
 .spacephoto{
@@ -117,7 +123,7 @@ font-weight: normal;
 }
 .son{
     width: 80vw;
-    margin: 0 9rem;
+    margin: 0 8rem;
 }
 
 .seyolas{

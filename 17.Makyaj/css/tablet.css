@@ -1,0 +1,66 @@
+
+.top-little-head{
+    display: none;
+}
+
+.flex-nav{
+    flex-direction: column;
+    margin: 0 auto;
+    
+   
+}
+
+.Ux{
+    display: none;
+}
+
+
+.search input{
+    width: 85vw;
+    /* width: 350px; */
+    padding: 0.5rem 0.5rem;
+    /* margin-left: 13rem; */
+    margin-left: 1rem;
+    background-color: #F3F4F6;
+    outline: none;
+
+}
+
+.search .ara{
+    width: 6vw;
+    padding: 0.5rem 0.2rem;
+}
+
+
+#note{
+   margin-bottom: 1rem;
+    position:static;
+    align-self: center;
+    width: 100px;
+    margin-left: 2rem;
+}
+
+
+
+.slider-img{ 
+    width: 99vw;
+    height: 42vh;
+    cursor: pointer;
+   
+}
+
+.most-sellers-slide{
+    grid-template-columns: repeat(3,1fr);
+}
+
+footer ul{
+    margin: 0.4rem;
+    letter-spacing: 0;
+
+}
+
+.son{
+    width: 90vw;
+    margin: 0 2rem;
+    margin-top: 1rem;
+}

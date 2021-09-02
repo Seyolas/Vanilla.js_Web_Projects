@@ -1,0 +1,21 @@
+.most-sellers-slide{
+    grid-template-columns: repeat(3,1fr);
+}
+
+.most-sellers{
+   width: 600px;
+   margin: 0 auto;
+}
+
+
+footer ul{
+    margin: 1rem;
+    letter-spacing: 0;
+
+}
+
+.son{
+    width: 90vw;
+    margin: 0 1rem;
+    margin-top: 1rem;
+}
