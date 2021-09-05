@@ -19,8 +19,8 @@
 }
 
 .most-sellers{
-   
-    width: 400px;
+  
+    width: 500px;
 }
 
 #note{
@@ -41,7 +41,7 @@
 }
 
 .search .ara{
-    width: 6vw;
+    width: 8vw;
     padding: 0.3rem 0.3rem;
 }
  */
@@ -50,7 +50,11 @@
 
 
 
+ footer ul{
+    margin: 0.1rem;
+    letter-spacing: 0;
 
+}
 
 
 

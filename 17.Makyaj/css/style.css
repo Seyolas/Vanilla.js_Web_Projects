@@ -250,6 +250,7 @@
     margin: 1rem auto;
     grid-gap: 1rem;
 }
+
 .most-sellers-slide span{
     font-size:larger;
     font-weight: bolder;
@@ -343,6 +344,10 @@ footer ul li a:hover{
     text-decoration: underline;
     
 }
+.oi{
+    font-weight: bold;
+}
+
 .oi li{
     margin-top: 0.4rem;
 }
