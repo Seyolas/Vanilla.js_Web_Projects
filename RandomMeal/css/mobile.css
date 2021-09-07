@@ -1,0 +1,32 @@
+#header{
+    width: fit-content;
+    margin: 0 auto;
+
+}
+
+.food-details{
+    flex-direction: column;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+iframe{
+    width: 350px;
+    height: 200px;
+}
+
+.min-area{
+position: relative;
+right: 80px;
+
+}
+.malzemeler{
+   position: relative;
+   right: 58px;
+}
+
+.video-recip{
+    position: relative;
+    right: 58px;
+   
+}

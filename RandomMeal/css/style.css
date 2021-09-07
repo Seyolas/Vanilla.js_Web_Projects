@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Mukta', sans-serif;
+}
+
+
+#header{
+    width: 1300px;
+    margin: 0 auto;
+
+}
+.container{
+   
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+/* AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA */
+
+.content{
+    width: 65vw;
+    margin: 0 auto;
+    margin-top: 2rem;
+}
+
+.food-details{
+    display: flex; 
+}
+
+
+.malzemeler ul li{
+    margin-left: 1rem;
+}
+
+
+
+.min-area{
+    margin-left: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.video-recip{
+    width: fit-content;
+    margin: 1rem auto;
+   
+}
