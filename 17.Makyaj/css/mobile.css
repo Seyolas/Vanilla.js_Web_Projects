@@ -4,7 +4,7 @@
 }
 
 #navbar{
-    display: none;
+position: fixed;
 }
 
 .flex-nav{
@@ -31,12 +31,10 @@
 
 }
 
-
  .search input{
     width: 75vw;
     padding: 0.3rem 0.3rem;
   
-   
 
 }
 
@@ -44,10 +42,6 @@
     width: 8vw;
     padding: 0.3rem 0.3rem;
 }
- */
-
-
-
 
 
  footer ul{
@@ -59,25 +53,9 @@
 
 
 
-
-
-
-
-
 .top-hr{
     display: none;
 }
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -85,22 +63,6 @@
     margin-top: 2rem;
     height: 30vh;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .most-sellers-slide{
     
